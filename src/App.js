@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-
+import Todolist from './Components/Todolist/Todolist'
 const Component = styled.div`
     display: flex;
     background-color: #fafafa;
@@ -29,6 +29,7 @@ const App = () => (
             <Header>
                 Todo List
             </Header>
+            <Todolist/>
         </Wrapper>
     </Component>
 )
