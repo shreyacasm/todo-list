@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 
 const Component = styled.div`
     padding: 1rem;
+    background-color: white;
     //border-bottom: 1px solid #e2e8f0;
 `
 const Item = styled.div`
@@ -17,7 +18,7 @@ const Item = styled.div`
     }
 `
 const buttonStyles = `
-    background-color: transparent;
+    background-color: black;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -42,13 +43,13 @@ const buttonStyles = `
 `
 const Complete = styled.button`
     ${buttonStyles};
-    border: ${props => props.completed ? 0 : '1px solid #e2e8f0'};
-    border: ${props => props.completed ? 0 : '1px solid #e2e8f0'};
+    border: ${props => props.completed ? 0 : '2px solid black'};
+    border: ${props => props.completed ? 0 : '2px solid black'};
 
 
 `
 const Label = styled.p`
-    margin: 0 0 0 0.5rem;
+    margin: 0 0 0 0.8rem;
     flex: 1;
  
     text-decoration: ${(props) => (props.completed ? 'line-through' : 'none' )};
@@ -61,6 +62,7 @@ const Label = styled.p`
 `
 const Delete = styled.button`
     ${buttonStyles};
+    background-color: white;
 `
 const NoItems = styled.p`
  margin: 0;
