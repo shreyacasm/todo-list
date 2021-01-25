@@ -7,12 +7,12 @@ const Wrapper = styled.div`
 `
 const StyledInput = styled.input`
     width: 100%;
-    padding: 1rem;
+    padding: 0.8rem;
     font-size: 1.4rem;
     border: 0;
     color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px grey;
-    background-color: black;
+    text-shadow: 1px 1px 1px white;
+    background-color: #2d4059;
 
     &:focus {
         outline: 0;
@@ -22,18 +22,17 @@ const StyledInput = styled.input`
 const Button = styled.button`
     border: 0;
     border-left: 1px solid #e2e8f0;
-    background-color: #696969;
+    background-color: #f5564e;
     color: #000000;
     padding: 1rem 2rem;
 
-    transition: all 0.25s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &: focus {
         outline: 0;
     }    
     &: hover {
         cursor: pointer;
-        background-color: #9ae6b4;
 
     }
 `
@@ -69,7 +68,7 @@ class Input extends Component {
             <Wrapper>
                 <StyledInput 
                 type='text' 
-                placeholder="Add item" 
+                placeholder="Add new task here" 
                 value={this.state.value} 
                 onChange = {this.handleChange}
                 onKeyPress={this.handleKeyPress}

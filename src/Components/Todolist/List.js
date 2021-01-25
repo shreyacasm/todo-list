@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 
 const Component = styled.div`
     padding: 1rem;
-    background-color: white;
+    background-color: #8abaf3;
     //border-bottom: 1px solid #e2e8f0;
 `
 const Item = styled.div`
@@ -18,7 +18,7 @@ const Item = styled.div`
     }
 `
 const buttonStyles = `
-    background-color: black;
+    background-color: transparent;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -62,7 +62,6 @@ const Label = styled.p`
 `
 const Delete = styled.button`
     ${buttonStyles};
-    background-color: white;
 `
 const NoItems = styled.p`
  margin: 0;

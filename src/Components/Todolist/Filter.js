@@ -6,7 +6,7 @@ const Component = styled.div`
     display:flex;
 `
 const Button = styled.button`
-    background-color: ${props => props.selected ? '#edf2f7' : "#909090"};
+    background-color: ${props => props.selected ? '#f5564e' : "#e8e2db"};
     border: 0;
     flex: 1;
     font-size: 1rem;
@@ -16,12 +16,12 @@ const Button = styled.button`
     text-transform: uppercase;
     &:first-of-type {
         border-radius: 0.375rem 0 0 0;
-        border-right: 1px solid #e2e8f0;
+        border-right: 2px solid grey;
         
     }
-    &:first-of-type {
+    &:last-of-type {
         border-radius: 0 0.375rem 0 0;
-        border-left: 1px solid #e2e8f0;
+        border-left: 1px solid grey;
         
     }
     &:focus{
@@ -29,7 +29,7 @@ const Button = styled.button`
     }
     &:hover{
         cursor: pointer;
-        background-color: #e2e8f0;
+        background-color: #ea5455;
     }
 `
 const buttons = [
