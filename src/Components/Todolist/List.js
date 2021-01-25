@@ -8,7 +8,10 @@ const Component = styled.div`
 const Item = styled.div`
     display: flex;
     align-items: center;
-
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
     &:not(:last-of-type) {
         margin-bottom: 1.5rem;
     }
@@ -49,7 +52,7 @@ const Label = styled.p`
     flex: 1;
  
     text-decoration: ${(props) => (props.completed ? 'line-through' : 'none' )};
-    color: ${(props) => (props.completed ? '#808080' : 'black' )};
+    color: ${(props) => (props.completed ? '#080808' : 'black' )};
     
     &:hover {
         cursor: pointer;
@@ -62,7 +65,9 @@ const Delete = styled.button`
 const NoItems = styled.p`
  margin: 0;
  text-align: center;
- color: red;
+ font-weight: 500;
+ color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 `
 
 const List = ({ items, onComplete, onDelete }) => (

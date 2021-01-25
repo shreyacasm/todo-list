@@ -3,12 +3,12 @@ import styled from 'styled-components/macro'
 import Filter from './Filter'
 import Input from './Input'
 import List from './List'
-
+import {v4 as uuidv4} from 'uuid' 
 const Wrapper = styled.div`
-    back-ground-color: #fff;
     border-radius: 0.375rem;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-    min-width: 350px;
+    width: '50%';
+    background-color: none;
     
 `
 
@@ -18,17 +18,12 @@ class Todolist extends Component {
         items: [ 
         {
             id: 1,
-            label: "Make the list component",
-            completed: false
-        },
-        {
-            id: 2,
-            label: "Inhale wisely",
+            label: "Tada... Use Todo list",
             completed: true
         },
         {
-            id: 3,
-            label: "Drink a cup of tea",
+            id: 2,
+            label: "Add tasks in Todo list",
             completed: false
         }
         ]
@@ -55,15 +50,39 @@ class Todolist extends Component {
     }
     handleTaskAdd = (value) => {
         console.log(value)
+        console.log(uuidv4())
+
+        const task = {
+            id: uuidv4(),
+            label: value,
+            completed: false
+        }
+
+        const newItems = [...this.state.items, task]
+
+        this.setState({items: newItems})
     }
 
     render () {
         const { mode, items } = this.state
+
+        let filteredItems = []
+
+        if( mode === 'completed'){
+            filteredItems = items.filter(item => item.completed === true)
+        }
+        else if( mode === 'active'){
+            filteredItems = items.filter(item => item.completed === false)
+        }
+        else {
+            filteredItems = items
+        }
+
         return (
            <Wrapper>
                <Filter mode={mode} onModeChange={this.handleModeChange} />
                <Input onTaskAdd={this.handleTaskAdd} />
-               <List items={items} onComplete={this.handleComplete} onDelete={this.handleDelete}/>
+               <List items={filteredItems} onComplete={this.handleComplete} onDelete={this.handleDelete}/>
            </Wrapper>
            
 

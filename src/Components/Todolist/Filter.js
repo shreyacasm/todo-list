@@ -6,13 +6,14 @@ const Component = styled.div`
     display:flex;
 `
 const Button = styled.button`
-    background-color: ${props => props.selected ? '#edf2f7' : "#fff"};
+    background-color: ${props => props.selected ? '#edf2f7' : "#909090"};
     border: 0;
     flex: 1;
-    font-weight: ${props => props.selected ? 500 : 400};
-    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: ${props => props.selected ? 600 : 500};
+    padding: 0.8rem;
     transition: all 0.25s ease-in-out;
-    
+    text-transform: uppercase;
     &:first-of-type {
         border-radius: 0.375rem 0 0 0;
         border-right: 1px solid #e2e8f0;

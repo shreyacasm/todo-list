@@ -8,7 +8,11 @@ const Wrapper = styled.div`
 const StyledInput = styled.input`
     width: 100%;
     padding: 1rem;
+    font-size: 1.4rem;
     border: 0;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px grey;
+    background-color: black;
 
     &:focus {
         outline: 0;
@@ -18,8 +22,8 @@ const StyledInput = styled.input`
 const Button = styled.button`
     border: 0;
     border-left: 1px solid #e2e8f0;
-    background-color: #68d391;
-    color: #fff;
+    background-color: #696969;
+    color: #000000;
     padding: 1rem 2rem;
 
     transition: all 0.25s ease-in-out;
